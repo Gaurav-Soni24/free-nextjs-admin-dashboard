@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import useColorMode from "@/hooks/useColorMode";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import SigninWithGoogle from "@/components/Auth/SigninWithGoogle/SigninWithGoogle";
+import app from "@/components/firebase/firebase";
 
 const Signin: React.FC = () => {
   const [email, setEmail] = useState("");

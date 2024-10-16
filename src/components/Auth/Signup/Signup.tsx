@@ -13,6 +13,7 @@ import { useRouter } from 'next/navigation';
 import useColorMode from "@/hooks/useColorMode";
 import { FcGoogle } from "react-icons/fc";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import app from "@/components/firebase/firebase";
 
 const Signup: React.FC = () => {
   const [name, setName] = useState("");

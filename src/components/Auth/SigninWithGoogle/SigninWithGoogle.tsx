@@ -1,6 +1,6 @@
 import React from "react";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "@/components/firebase/firebase";
+import { signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "@/components/firebase/firebase";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
@@ -8,9 +8,8 @@ const SigninWithGoogle: React.FC = () => {
   const router = useRouter();
 
   const handleGoogleSignIn = async () => {
-    const provider = new GoogleAuthProvider();
     try {
-      const result = await signInWithPopup(auth, provider);
+      const result = await signInWithPopup(auth, googleProvider);
       toast.success("Signed in with Google");
       router.push("/profile");
     } catch (error) {

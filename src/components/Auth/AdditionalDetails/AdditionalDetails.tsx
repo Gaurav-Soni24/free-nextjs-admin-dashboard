@@ -12,6 +12,7 @@ import { useLocation } from '@/components/contexts/LocationContext';
 import { useLocationSearch } from '@/hooks/useLocationSearch';
 import { useRouter } from 'next/navigation';
 import useColorMode from "@/hooks/useColorMode";
+import app from "@/components/firebase/firebase";
 
 const AdditionalDetails: React.FC = () => {
   const [dob, setDob] = useState("");
