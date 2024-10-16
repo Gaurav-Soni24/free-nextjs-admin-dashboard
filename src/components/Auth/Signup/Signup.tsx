@@ -45,7 +45,7 @@ const Signup: React.FC = () => {
         createdAt: new Date().toISOString(),
       });
       toast.success("Signup successful! Please sign in.");
-      router.push("/login");
+      router.push("/auth/signin");
     } catch (error: any) {
       console.error("Error during signup:", error);
       setError(error.message);
@@ -64,7 +64,7 @@ const Signup: React.FC = () => {
         createdAt: new Date().toISOString(),
       }, { merge: true });
       toast.success("Google sign-up successful! Please sign in.");
-      router.push("/login");
+      router.push("/auth/signin");
     } catch (error: any) {
       console.error("Error during Google sign-up:", error);
       setError(error.message);
