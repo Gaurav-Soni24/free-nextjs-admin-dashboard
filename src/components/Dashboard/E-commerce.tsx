@@ -13,6 +13,8 @@ const ChartThree = dynamic(() => import("@/components/Charts/ChartThree"), { ssr
 const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import { useLocation } from '../../components/contexts/LocationContext';
 import HistoricalAverageAirQualityDataOfMetropolitanCities from '../HistoricalAverageAirQualityDataOfMetropolitanCities/HistoricalAverageAirQualityDataOfMetropolitanCities';
+import TopPollutedCities from '../TopPollutedCities/TopPollutedCities';
+import LeastPollutedCities from '../LeastPollutedCities/LeastPollutedCities';
 
 interface PollutionDistributionCardProps {
   pm25: number;
@@ -200,6 +202,8 @@ const AirQualityDashboard: React.FC = () => {
         <div className="col-span-7">
           <HistoricalAverageAirQualityDataOfMetropolitanCities />
         </div>
+        <TopPollutedCities /> 
+        <LeastPollutedCities />
       </div>
     </>
   );

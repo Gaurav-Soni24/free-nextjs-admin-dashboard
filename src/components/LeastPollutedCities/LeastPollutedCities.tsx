@@ -1,28 +1,29 @@
 import React from 'react';
-import { FaCity, FaWind, FaSmog } from 'react-icons/fa';
-import data from './TopPollutedCitiesData.json';
+import { FaCity, FaWind, FaLeaf } from 'react-icons/fa';
+import data from './LeastPollutedCities.json';
 
 interface CityData {
   City: string;
   AQI: number;
 }
-const TopPollutedCities: React.FC = () => {
+
+const LeastPollutedCities: React.FC = () => {
   const getAQIColor = (aqi: number) => {
-    if (aqi <= 50) return 'bg-green-500';
-    if (aqi <= 100) return 'bg-yellow-500';
-    if (aqi <= 150) return 'bg-orange-500';
-    if (aqi <= 200) return 'bg-red-500';
-    if (aqi <= 300) return 'bg-purple-500';
-    return 'bg-red-900';
+    if (aqi <= 50) return 'bg-success';
+    if (aqi <= 100) return 'bg-warning';
+    if (aqi <= 150) return 'bg-danger';
+    if (aqi <= 200) return 'bg-danger-dark';
+    if (aqi <= 300) return 'bg-purple';
+    return 'bg-danger-darker';
   };
 
   return (
     <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
       <div className="mb-6 flex items-center justify-between">
         <div className="flex items-center">
-          <FaSmog className="text-danger mr-2 text-2xl" />
+          <FaLeaf className="text-success mr-2 text-2xl" />
           <h4 className="text-xl font-semibold text-black dark:text-white">
-            Most Polluted Cities
+            Cleanest Air Cities
           </h4>
         </div>
         <div className="flex items-center space-x-2">
@@ -65,4 +66,4 @@ const TopPollutedCities: React.FC = () => {
   );
 };
 
-export default TopPollutedCities;
+export default LeastPollutedCities;
