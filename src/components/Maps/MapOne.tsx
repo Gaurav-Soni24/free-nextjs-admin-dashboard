@@ -65,9 +65,9 @@ const MapOne: React.FC = () => {
           Math.pow(stationCoord[1] - clickedCoord[1], 2)
         );
         return distance < nearest.distance ? { station, distance } : nearest;
-      }, { station: null, distance: Infinity }).station;
+      }, { station: null as any, distance: Infinity });
 
-      setSelectedStationData(nearestStation);
+      setSelectedStationData(nearestStation.station);
     });
   }, [lat, lng]);
 
