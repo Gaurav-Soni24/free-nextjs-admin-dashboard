@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import DefaultLayout from '../../../components/Layouts/DefaultLayout';
+import Image from 'next/image';
 
 const Page: React.FC = () => {
   const [activeSection, setActiveSection] = useState('');
@@ -102,9 +103,11 @@ const Page: React.FC = () => {
                 In naturally ventilated rooms, the physics of air movement creates a natural flow: warm air rises and escapes through upper windows and vents, while cooler, fresh air is drawn in through lower openings. This continuous cycle helps maintain air quality and temperature balance.
               </p> 
             </div>
-            <img 
+            <Image 
               src="https://images.pexels.com/photos/7587861/pexels-photo-7587861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
               alt="Ventilation" 
+              width={500}
+              height={300}
               className="w-full sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto rounded-lg shadow-md mt-4 mx-auto"
             />
           </section>
