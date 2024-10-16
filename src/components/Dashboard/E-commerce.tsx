@@ -12,6 +12,7 @@ const MapOne = dynamic(() => import("@/components/Maps/MapOne"), { ssr: false })
 const ChartThree = dynamic(() => import("@/components/Charts/ChartThree"), { ssr: false });
 const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import { useLocation } from '../../components/contexts/LocationContext';
+import HistoricalAverageAirQualityDataOfMetropolitanCities from '../HistoricalAverageAirQualityDataOfMetropolitanCities/HistoricalAverageAirQualityDataOfMetropolitanCities';
 
 interface PollutionDistributionCardProps {
   pm25: number;
@@ -193,12 +194,12 @@ const AirQualityDashboard: React.FC = () => {
 
       <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
         <ChartTwo trendData={trendData} />
-        <PollutionDistributionCard pm25={pm25} o3={o3} no2={no2} so2={so2} co={co} />
         <HealthRecommendationCard aqi={aqi !== null ? aqi : 0} />
         <MapOne/>
-        {/* <div className="col-span-12 xl:col-span-8">
-          <TableOne />
-        </div> */}
+        <PollutionDistributionCard pm25={pm25} o3={o3} no2={no2} so2={so2} co={co} />
+        <div className="col-span-7">
+          <HistoricalAverageAirQualityDataOfMetropolitanCities />
+        </div>
       </div>
     </>
   );

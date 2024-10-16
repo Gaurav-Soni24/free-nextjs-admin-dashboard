@@ -64,6 +64,9 @@ const Profile = () => {
             ...data,
             age: calculatedAge || data.age,
             lastActive: today.toLocaleDateString(),
+            email: authUser.email,
+            name: authUser.displayName,
+            photoURL: authUser.photoURL
           });
         }
       } else {
@@ -103,6 +106,8 @@ const Profile = () => {
   if (!user || !userData) {
     return null; // This will prevent any flickering while redirecting
   }
+
+  console.log(userData);
 
   return (
     <DefaultLayout>
@@ -152,7 +157,7 @@ const Profile = () => {
               </button>
             </div>
             <div className="absolute bottom-0 left-0 right-0 flex flex-col sm:flex-row items-center sm:items-end p-4 sm:p-6">
-              {isGoogleAuth && userData.photoURL && (
+              {userData.photoURL && (
                 <Image
                   src={userData.photoURL}
                   alt={userData.name}
