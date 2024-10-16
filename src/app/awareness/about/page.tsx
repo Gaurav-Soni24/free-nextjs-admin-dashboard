@@ -116,7 +116,7 @@ const Page: React.FC = () => {
               </svg>
               Is air pollution an issue?
             </h2>
-            <p className="mb-4 text-green-700">Air pollutants can affect people's health, as well as the health of the environment. We breathe them in, they enter our lungs and then can move into the bloodstream where they can reach other organs such as our hearts and brains.</p>
+            <p className="mb-4 text-green-700">Air pollutants can affect people&apos;s health, as well as the health of the environment. We breathe them in, they enter our lungs and then can move into the bloodstream where they can reach other organs such as our hearts and brains.</p>
             <p className="mb-4 text-green-700">Air pollution can cause or worsen a range of health problems including:</p>
             <ul className="list-disc list-inside mb-4 text-green-700">
               <li>Respiratory diseases such as asthma and chronic obstructive pulmonary disease (COPD)</li>
@@ -124,7 +124,7 @@ const Page: React.FC = () => {
               <li>Stroke</li>
               <li>Lung cancer</li>
             </ul>
-            <p className="text-green-700">It can also affect children's lung development and may be linked to other health issues such as diabetes and dementia.</p>
+            <p className="text-green-700">It can also affect children&apos;s lung development and may be linked to other health issues such as diabetes and dementia.</p>
           </section>
 
           <section id="data-insights" className="mb-12 bg-green-50 p-6 rounded-lg shadow-md">
@@ -134,9 +134,9 @@ const Page: React.FC = () => {
               </svg>
               What to look for in air quality data
             </h2>
-            <p className="mb-4 text-green-700">Sharp increases in the level of any of the indoor air quality metrics we're measuring (CO2, PM2.5 or TVOCs), may look alarming even if they are short-lived, but it is much more important to look at averages and the overall trend.</p>
+            <p className="mb-4 text-green-700">Sharp increases in the level of any of the indoor air quality metrics we&apos;re measuring (CO2, PM2.5 or TVOCs), may look alarming even if they are short-lived, but it is much more important to look at averages and the overall trend.</p>
             <p className="mb-4 text-green-700">For example, CO2 levels may spike when a room is full of people, but if they quickly return to normal levels when the room is ventilated, this is not necessarily a cause for concern. However, if CO2 levels remain consistently high throughout the day, this could indicate a need for improved ventilation.</p>
-            <p className="text-green-700">Similarly, for PM2.5 and TVOCs, occasional spikes are less concerning than consistently elevated levels. It's important to look at the data over time and consider any patterns or trends that emerge.</p>
+            <p className="text-green-700">Similarly, for PM2.5 and TVOCs, occasional spikes are less concerning than consistently elevated levels. It&apos;s important to look at the data over time and consider any patterns or trends that emerge.</p>
           </section>
 
           <div className="text-center">

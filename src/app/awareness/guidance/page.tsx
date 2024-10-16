@@ -88,14 +88,14 @@ const Page: React.FC = () => {
                 <strong>Natural ventilation:</strong> This is the most common type in UK rooms. It relies on natural processes such as wind and temperature differences to drive air movement. Natural ventilation works through openings like windows, doors, chimneys, and wind catchers. It functions based on pressure differences: air moves from high pressure to low pressure areas. In schools, warm air rises and escapes through upper portions of windows and high-level vents, drawing in fresh air from outside through lower openings.
               </li>
               <li className="mb-2">
-                <strong>Mechanical ventilation:</strong> This system uses fans to move fresh air in and stale air out of spaces. Air travels through ducts to vents (often with grills) on ceilings, walls, or floors. It's important to note that extract ventilation systems (commonly found in toilets and kitchens) that only remove stale air without managing incoming air are not considered full mechanical ventilation.
+                <strong>Mechanical ventilation:</strong> This system uses fans to move fresh air in and stale air out of spaces. Air travels through ducts to vents (often with grills) on ceilings, walls, or floors. It&apos;s important to note that extract ventilation systems (commonly found in toilets and kitchens) that only remove stale air without managing incoming air are not considered full mechanical ventilation.
               </li>
             </ol>
             <p className="text-green-600 mb-4">
               Some rooms use a mixed-mode or hybrid system, combining both natural and mechanical ventilation methods.
             </p>
             <p className="text-green-600 mb-4">
-              If your room has openable windows or a door to the outdoors, it has at least some natural ventilation. However, it's important to note that fire doors should not be propped open and cannot be considered as a source of ventilation.
+              If your room has openable windows or a door to the outdoors, it has at least some natural ventilation. However, it&apos;s important to note that fire doors should not be propped open and cannot be considered as a source of ventilation.
             </p>
             <div className="bg-green-100 p-4 rounded-lg">
               <p className="text-green-700 font-semibold">Did you know?</p>
@@ -129,7 +129,7 @@ const Page: React.FC = () => {
 
             <h3 className="text-xl font-semibold mb-3 text-green-700">Improving ventilation in naturally ventilated rooms:</h3>
             <p className="text-green-600 mb-4">
-              The SAMHE monitor's CO2 and temperature readings can help balance thermal comfort, heating costs, and air quality. Consider checking readings before occupants arrive and during breaks to assess ventilation needs.
+              The SAMHE monitor&apos;s CO2 and temperature readings can help balance thermal comfort, heating costs, and air quality. Consider checking readings before occupants arrive and during breaks to assess ventilation needs.
             </p>
 
             <h4 className="text-lg font-semibold mb-2 text-green-700">Recommendations for different natural ventilation systems:</h4>
@@ -174,7 +174,7 @@ const Page: React.FC = () => {
           <section id="co2-monitors" className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-green-700">CO2 monitors and ventilation levels</h2>
             <p className="text-green-600 mb-4">
-              CO2 levels can be used as a proxy for ventilation effectiveness. Here's a general guide:
+              CO2 levels can be used as a proxy for ventilation effectiveness. Here&apos;s a general guide:
             </p>
             <ul className="list-disc list-inside text-green-600">
               <li>Below 800ppm: Good ventilation</li>
