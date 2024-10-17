@@ -171,7 +171,7 @@ const MapOne: React.FC = () => {
               <p>Nearest Station: {selectedStationData.Station}</p>
               <p>AQI: {selectedStationData.AQI} ({selectedStationData.AQI_Quality})</p>
               <p>City: {selectedStationData.City}, {selectedStationData.State}</p>
-              <p>Last Updated: {selectedStationData.Pol_Date}</p>
+              {/* <p>Last Updated: {selectedStationData.Pol_Date}</p> */}
             </div>
           )}
         </div>
