@@ -18,7 +18,7 @@ const LeastPollutedCities: React.FC = () => {
   };
 
   return (
-    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-5">
+    <div className="col-span-12 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:col-span-6">
       <div className="mb-6 flex items-center justify-between">
         <div className="flex items-center">
           <FaLeaf className="text-success mr-2 text-2xl" />

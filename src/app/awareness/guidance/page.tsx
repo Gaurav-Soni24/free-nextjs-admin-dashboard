@@ -103,13 +103,6 @@ const Page: React.FC = () => {
                 In naturally ventilated rooms, the physics of air movement creates a natural flow: warm air rises and escapes through upper windows and vents, while cooler, fresh air is drawn in through lower openings. This continuous cycle helps maintain air quality and temperature balance.
               </p> 
             </div>
-            <Image 
-              src="https://images.pexels.com/photos/7587861/pexels-photo-7587861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-              alt="Ventilation" 
-              width={500}
-              height={300}
-              className="w-full sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto rounded-lg shadow-md mt-4 mx-auto"
-            />
           </section>
           <section id="recommendations" className="mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-green-700">Recommendations to improve ventilation</h2>
@@ -182,11 +175,6 @@ const Page: React.FC = () => {
               <li>1000-1500ppm: Poor ventilation, action should be considered</li>
               <li>Above 1500ppm: Very poor ventilation, immediate action required</li>
             </ul>
-            <img 
-              src="https://samhe.org.uk/images/resources/ventilation/monitor_display_orange_lights.jpg" 
-              alt="CO2 Monitor" 
-              className="w-full sm:w-2/3 md:w-1/2 lg:w-1/2 h-auto rounded-lg shadow-md mt-4 mx-auto"
-            />
           </section>
           
           <section id="covid-19" className="mb-8">

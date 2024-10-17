@@ -15,6 +15,9 @@ import { useLocation } from '../../components/contexts/LocationContext';
 import HistoricalAverageAirQualityDataOfMetropolitanCities from '../HistoricalAverageAirQualityDataOfMetropolitanCities/HistoricalAverageAirQualityDataOfMetropolitanCities';
 import TopPollutedCities from '../TopPollutedCities/TopPollutedCities';
 import LeastPollutedCities from '../LeastPollutedCities/LeastPollutedCities';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AQIHeatMap from '../HeatMap/HeatMap';
 
 interface PollutionDistributionCardProps {
   pm25: number;
@@ -98,6 +101,41 @@ const AirQualityDashboard: React.FC = () => {
   const [co, setCo] = useState<number>(0);
   const [trendData, setTrendData] = useState<any[]>([]);
 
+  const showAQIAlert = (aqi: number) => {
+    let message = '';
+    let type: 'info' | 'success' | 'warning' | 'error' = 'info';
+
+    if (aqi <= 50) {
+      message = 'Air quality is Good';
+      type = 'success';
+    } else if (aqi <= 100) {
+      message = 'Air quality is Moderate';
+      type = 'info';
+    } else if (aqi <= 150) {
+      message = 'Air quality is Unhealthy for Sensitive Groups';
+      type = 'warning';
+    } else if (aqi <= 200) {
+      message = 'Air quality is Unhealthy';
+      type = 'error';
+    } else if (aqi <= 300) {
+      message = 'Air quality is Very Unhealthy';
+      type = 'error';
+    } else {
+      message = 'Air quality is Hazardous';
+      type = 'error';
+    }
+
+    toast[type](message, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
   const fetchAirQualityData = useCallback(async () => {
     if (lat === null || lng === null) {
       setAqi(null);
@@ -126,7 +164,9 @@ const AirQualityDashboard: React.FC = () => {
         };
 
         const pm25 = data.hourly.pm2_5[latestIndex];
-        setAqi(calculateAQI(pm25));
+        const calculatedAQI = calculateAQI(pm25);
+        setAqi(calculatedAQI);
+        showAQIAlert(calculatedAQI);
         setPm25(pm25);
         setPm10(data.hourly.pm10[latestIndex]);
         setO3(data.hourly.ozone[latestIndex]);
@@ -174,6 +214,7 @@ const AirQualityDashboard: React.FC = () => {
 
   return (
     <>
+      <ToastContainer />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 2xl:gap-7.5">
         <AQICard
           value={aqi !== null ? aqi : 0}
@@ -204,6 +245,7 @@ const AirQualityDashboard: React.FC = () => {
         </div>
         <TopPollutedCities /> 
         <LeastPollutedCities />
+        <AQIHeatMap />
       </div>
     </>
   );
